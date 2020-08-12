@@ -1,4 +1,4 @@
-# MicrobitPocket
+# MicrobittoPocket
 
 Micro:Bit控制Pocket積木
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-microbitpocket=github:crouse12/microbitpocket
+microbittopocket=github:crouse12/microbittopocket
 ```
