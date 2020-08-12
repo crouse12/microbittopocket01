@@ -1,4 +1,4 @@
-//% weight=0 color=#FFBA3B icon="\uf0ad" block="Microbittopocket"
+//% weight=0 color=#FFBA3B icon="\uf0ad" block="microbittopocket"
 namespace microbittopocket {
      let iii=1
      let ssid1=""
