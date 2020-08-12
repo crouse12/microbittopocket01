@@ -1,0 +1,15 @@
+{
+    "name": "microbitpocket",
+    "version": "0.1",
+    "description": "這是micro:bit的pocket控制積木",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/microbitpoeckt-strings.json"
+    ],
+    "public": true
+}
