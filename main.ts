@@ -94,26 +94,26 @@ namespace microbittopocket {
             iii=iii+1
         }
     }
-    //% group="2.ESP32_Control"  
+    //% group="2.Pocket_Control"  
     //% blockId=setpinmode1 block="Set Pocket digital pin %pin | for %XY"
     //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
-    //% group="2.ESP32_Control" 
+    //% group="2.Pocket_Control" 
     //% blockId=setdigital1 block="Set Pocket digital pin  %pin | value to %XY"
     //% weight=101
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
-    //% group="2.ESP32_Control"     
+    //% group="2.Pocket_Control"     
     //% blockId=setdigital2 block="Set Pocket PWM pin  %pin | value to %XY"
     //% weight=101
     export function setdigital2(pin: digitalpin, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
-    //% group="2.ESP32_Control" 
+    //% group="2.Pocket_Control" 
     //% blockId=setdigital3 block="Read Pocket digital pin  %pin value"
     //% weight=101
     export function setdigital3(pin: digitalpin):number {
@@ -122,7 +122,7 @@ namespace microbittopocket {
         let a=serial.readString()
         return parseFloat(a);
     }
-    //% group="2.ESP32_Control"
+    //% group="2.Pocket_Control"
     //% blockId=setdigital4 block="Read Pocket analog pin  %pin value"
     //% weight=101 
     export function setdigital4(pin: analogpin):number {
@@ -208,15 +208,6 @@ namespace microbittopocket {
           check()
           serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
     }   
-        //% group="RFID"
-    //% blockId=rfidid block="read arduino rfid id"
-    //% weight=101 advanced=true
-    export function rfidid():string {
-        serial.writeLine("rfidid="+"\\n")
-        basic.pause(10)
-        let a=serial.readString()
-        a=a.substr(0, a.length - 2)
-        return a
-    }   
+ 
       
 }
