@@ -72,7 +72,7 @@ namespace microbittopocket {
         basic.pause(1000)
     }
     //% group="1.Setup"
-    //% blockId=setWiFi block="Set ESP32 | SSID %SSID| Pass %PASS| Mode %mode1 "
+    //% blockId=setWiFi block="Set Pocket | SSID %SSID| Pass %PASS| Mode %mode1 "
     //% weight=101
     //% blockExternalInputs = 1
     export function setWiFi(SSID: string, PASS: string, mode1: mode) {
@@ -95,26 +95,26 @@ namespace microbittopocket {
         }
     }
     //% group="2.ESP32_Control"  
-    //% blockId=setpinmode1 block="Set ESP32 digital pin %pin | for %XY"
+    //% blockId=setpinmode1 block="Set Pocket digital pin %pin | for %XY"
     //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
     //% group="2.ESP32_Control" 
-    //% blockId=setdigital1 block="Set ESP32 digital pin  %pin | value to %XY"
+    //% blockId=setdigital1 block="Set Pocket digital pin  %pin | value to %XY"
     //% weight=101
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
     //% group="2.ESP32_Control"     
-    //% blockId=setdigital2 block="Set ESP32 PWM pin  %pin | value to %XY"
+    //% blockId=setdigital2 block="Set Pocket PWM pin  %pin | value to %XY"
     //% weight=101
     export function setdigital2(pin: digitalpin, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
     //% group="2.ESP32_Control" 
-    //% blockId=setdigital3 block="Read ESP32 digital pin  %pin value"
+    //% blockId=setdigital3 block="Read Pocket digital pin  %pin value"
     //% weight=101
     export function setdigital3(pin: digitalpin):number {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
@@ -123,7 +123,7 @@ namespace microbittopocket {
         return parseFloat(a);
     }
     //% group="2.ESP32_Control"
-    //% blockId=setdigital4 block="Read ESP32 analog pin  %pin value"
+    //% blockId=setdigital4 block="Read Pocket analog pin  %pin value"
     //% weight=101 
     export function setdigital4(pin: analogpin):number {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
