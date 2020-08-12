@@ -1,6 +1,6 @@
 {
     "name": "microbittopocket",
-    "version": "0.1",
+    "version": "0.2",
     "description": "這是micro:bit的pocket控制積木",
     "license": "MIT",
     "dependencies": {
