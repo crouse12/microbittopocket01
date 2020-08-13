@@ -14,8 +14,8 @@
     "microbittopocket.ifttt1|block": "連線到IFTTT | API key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3",
     "microbittopocket.thingspeak3|block": "連線到Thingspeak Channel ID %key | 讀取 %value1 資料",
     "microbittopocket.thingspeak4|block": "連線到Thingspeak key %key | 寫入 Fields value | Field1 value %value1 || Field2 value %value2 Field3 value %value3 Field4 value %value4 Field5 value %value5 Field6 value %value6 Field7 value %value7",
-    "microbittopocket.ddy|block": "OLED顯示",
-    "microbittopocket.dc|block": "OLED清除",
-    "microbittopocket.dscp1|block": "OLED 顯示 x %x y %y 大小 %size 顏色 %color1 字串 %words",
-    "microbittopocket.ddL|block": "OLED 顯示 x1 %x1 y1 %y1 x2 %x2 y2 %y2 顏色 %color1 線"
+    "microbittopocket.ddy|block": "OLED 顯示",
+    "microbittopocket.dc|block": "OLED 清除",
+    "microbittopocket.dscp1|block": "OLED 顯示 x %x y %y 大小 %size 顏色 %color1 字串 %words ",
+    "microbittopocket.ddL|block": "OLED 顯示 x1 %x1 y1 %y1 x2 %x2 y2 %y2 顏色 %color1 線 "
 }
