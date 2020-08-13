@@ -86,7 +86,7 @@ namespace microbittopocket {
             rx,
             baudrate
         )
-        basic.pause(1200)
+        pause(1200)
     }
     //% group="1.Setup"
     //% blockId=setWiFi block="Set Pocket | SSID %SSID| Pass %PASS| Mode %mode1 "
@@ -106,7 +106,7 @@ namespace microbittopocket {
             for(y=0;y<3;y++)
             {
                   serial.writeLine("setwifi="+ssid1+","+pass1+","+mode2+",1\\n")  
-                  basic.pause(3000)
+                  pause(3000)
             }
             iii=iii+1
         }
@@ -179,7 +179,7 @@ namespace microbittopocket {
               }
         }
         serial.writeLine("t\="+key+","+b+"\\n")
-        basic.pause(8000)
+        pause(8000)
     }
     //% group="3.Thingspeak"      
     //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
@@ -201,7 +201,7 @@ namespace microbittopocket {
               }
         }
         serial.writeLine("t\="+key+","+b+"\\n")
-        basic.pause(8000)
+        pause(8000)
     }
 
       
@@ -213,7 +213,7 @@ namespace microbittopocket {
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
         basic.pause(500)
         let a=serial.readString()
-        basic.pause(500)
+        pause(500)
         return parseInt(a)
 
     }     
