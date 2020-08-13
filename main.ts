@@ -233,13 +233,13 @@ namespace microbittopocket {
          serial.writeLine("ddy="+"\\n")
     }  
     //% group="5.OLED"  
-    //% blockId=ddy block="OLED Clear"
+    //% blockId=dc block="OLED Clear"
     //% weight=50
     export function dc(){
          serial.writeLine("dc="+"\\n")
     }  
     //% group="5.OLED"  
-    //% blockId=ddy block="OLED Show x %x y %y size %size color %color words %words"
+    //% blockId=dscp1 block="OLED Show x %x y %y size %size color %color words %words"
     //% weight=47
     export function dscp1(x: number, y: number, size: number, color1: color, words: string){
          serial.writeLine("dscp1="+size.toString()+","+x..toString()+","+y.toString()+","+words.toString()+","+color1.toString()+"\\n")
