@@ -86,7 +86,7 @@ namespace microbittopocket {
             rx,
             baudrate
         )
-        basic.pause(3000)
+        basic.pause(200)
     }
     //% group="1.Setup"
     //% blockId=setWiFi block="Set Pocket | SSID %SSID| Pass %PASS| Mode %mode1 "
