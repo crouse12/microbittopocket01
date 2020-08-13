@@ -5,31 +5,50 @@ namespace microbittopocket {
      let pass1=""
      let mode2=1
      export enum digitalpin {
-
-        D2 = 2,
-        D5 = 5,
-        D12 = 12,
-        D13 = 13,
-        D14 = 14,
-        D15 = 15,
-        D16 = 16,
-        D17 = 17,
-        D18 = 18,
-        D19 = 19,
-        D23 = 23,
-        D25 = 25,
-        D26 = 26,
-        D27 = 27
+        P0 = 26,
+        P1 = 33,
+        P2 = 32,
+        P4 = 4,
+        P5 = 14,
+        P8 = 27,
+        P9 = 13,
+        P10 = 2,
+        P12 = 15,
+        P13 = 18,
+        P14 = 19,
+        P15 = 23,
+        P16 = 5,
+        P19 = 22,
+        P20 = 21
       }
       export enum analogpin {
-        D32 = 32,
-        D33 = 33,
-        D34 = 34,
-        D35 = 35,
-        D36 = 36,
-        D39 = 39
+        P1 = 33,
+        P2 = 32,
+        P3 = 35
      }
       
+     export enum color {
+        WHITE = 0,
+        BLACK = 1
+     }
+      export enum digitalpin1 {
+        P0 = 26,
+        P1 = 33,
+        P2 = 32,
+        P3 = 35,
+        P4 = 4,
+        P5 = 14,
+        P8 = 27,
+        P9 = 13,
+        P10 = 2,
+        P12 = 15,
+        P13 = 18,
+        P14 = 19,
+        P15 = 23,
+        P16 = 5,
+        P19 = 22,
+        P20 = 21
+      } 
      
       export enum value555 {
         field1 = 1 ,
@@ -42,8 +61,6 @@ namespace microbittopocket {
         field8 = 8
      }
       
-      
-
       export enum type {
         INPUT = 2,
         OUTPUT = 1
@@ -116,7 +133,7 @@ namespace microbittopocket {
     //% group="2.Pocket_Control" 
     //% blockId=setdigital3 block="Read Pocket digital pin  %pin value"
     //% weight=101
-    export function setdigital3(pin: digitalpin):number {
+    export function setdigital3(pin: digitalpin1):number {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
@@ -209,5 +226,23 @@ namespace microbittopocket {
           serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
     }   
  
+    //% group="5.OLED"  
+    //% blockId=ddy block="OLED Show"
+    //% weight=49
+    export function ddy(){
+         serial.writeLine("ddy="+"\\n")
+    }  
+    //% group="5.OLED"  
+    //% blockId=ddy block="OLED Clear"
+    //% weight=50
+    export function dc(){
+         serial.writeLine("dc="+"\\n")
+    }  
+    //% group="5.OLED"  
+    //% blockId=ddy block="OLED Show x %x y %y size %size words %words"
+    //% weight=47
+    export function dscp1(x: number, y: number, size: number, color1: color, words:string){
+         serial.writeLine("dscp1="+size.toString()+","+x..toString()+","+y.toString()+","+words.toString()+","+color1.toString()+"\\n")
+    } 
       
 }
