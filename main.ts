@@ -86,7 +86,7 @@ namespace microbittopocket {
             rx,
             baudrate
         )
-        pause(1200)
+        pause(3000)
     }
     //% group="1.Setup"
     //% blockId=setWiFi block="Set Pocket | SSID %SSID| Pass %PASS| Mode %mode1 "
@@ -115,7 +115,8 @@ namespace microbittopocket {
     //% blockId=setpinmode1 block="Set Pocket digital pin %pin | for %XY"
     //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
-       serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
+       serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")
+       pause(100)
     }
      
     //% group="2.Pocket_Control" 
