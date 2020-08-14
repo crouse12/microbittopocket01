@@ -106,7 +106,7 @@ namespace microbittopocket {
             for(y=0;y<3;y++)
             {
                   serial.writeLine("setwifi="+ssid1+","+pass1+","+mode2+",1\\n")  
-                  pause(3000)
+                  basic.pause(3000)
             }
             iii=iii+1
         }
@@ -116,7 +116,7 @@ namespace microbittopocket {
     //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")
-       pause(100)
+       basic.pause(100)
     }
      
     //% group="2.Pocket_Control" 
@@ -180,7 +180,7 @@ namespace microbittopocket {
               }
         }
         serial.writeLine("t\="+key+","+b+"\\n")
-        pause(8000)
+        basic.pause(8000)
     }
     //% group="3.Thingspeak"      
     //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
@@ -202,7 +202,7 @@ namespace microbittopocket {
               }
         }
         serial.writeLine("t\="+key+","+b+"\\n")
-        pause(8000)
+        basic.pause(8000)
     }
 
       
@@ -214,7 +214,7 @@ namespace microbittopocket {
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
         basic.pause(500)
         let a=serial.readString()
-        pause(500)
+        basic.pause(500)
         return parseInt(a)
 
     }     
