@@ -80,7 +80,7 @@ namespace microbittopocket {
     //% rx.defl=SerialPin.P1
     //% weight=101
     //% blockExternalInputs = 1
-    export function setMicrobit(tx: SerialPin, rx: SerialPin, baudrate: BaudRate) {
+    export function setMicrobit(tx: SerialPin, rx: SerialPin, baudrate: BaudRate):void {
         serial.redirect(
             tx,
             rx,
@@ -92,7 +92,7 @@ namespace microbittopocket {
     //% blockId=setWiFi block="Set Pocket | SSID %SSID| Pass %PASS| Mode %mode1 "
     //% weight=101
     //% blockExternalInputs = 1
-    export function setWiFi(SSID: string, PASS: string, mode1: mode) {
+    export function setWiFi(SSID: string, PASS: string, mode1: mode):void {
         ssid1=SSID
         pass1=PASS
         mode2=mode1
@@ -153,7 +153,7 @@ namespace microbittopocket {
     //% group="3.Thingspeak"      
     //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write Field1 value %value1 "
     //% weight=101 
-    export function thingspeak1(key:string, value1: string) {
+    export function thingspeak1(key:string, value1: string):void {
         check()
         serial.writeLine("t\="+key+","+value1+"\\n")
         basic.pause(4000)
@@ -163,7 +163,7 @@ namespace microbittopocket {
     //% block="Connect to Thingspeak key %key | Write Fields value | Field1 value %value1 || Field2 value %value2 Field3 value %value3 Field4 value %value4 Field5 value %value5 Field6 value %value6 Field7 value %value7"
     //% weight=101  
     //% blockExternalInputs=1
-    export function thingspeak4(key:string, value1: number, value2?:number, value3?:number, value4?:number, value5?:number, value6?:number, value7?:number) {    
+    export function thingspeak4(key:string, value1: number, value2?:number, value3?:number, value4?:number, value5?:number, value6?:number, value7?:number):void {    
         check()
         let b=""
         let i
@@ -185,7 +185,7 @@ namespace microbittopocket {
     //% group="3.Thingspeak"      
     //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
     //% weight=101
-    export function thingspeak2(key:string, value1: number[]) {
+    export function thingspeak2(key:string, value1: number[]):void {
         check()
         let a=value1.length
         let b=""
@@ -222,7 +222,7 @@ namespace microbittopocket {
     //% group="4.IFTTT"  
     //% blockId=ifttt1 block="Connect to IFTTT | API key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
     //% weight=101 blockExternalInputs = 1 blockGap=1
-    export function ifttt1(key: string, event: string, value1: string, value2: string, value3: string) {
+    export function ifttt1(key: string, event: string, value1: string, value2: string, value3: string):void {
           check()
           serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
     }   
@@ -242,13 +242,13 @@ namespace microbittopocket {
     //% group="5.OLED"  
     //% blockId=dscp1 block="OLED Show x %x y %y size %size color %color1 words %words"
     //% weight=47
-    export function dscp1(x: number, y: number, size: number, color1: color, words: string){
+    export function dscp1(x: number, y: number, size: number, color1: color, words: string):void{
          serial.writeLine("dscp1="+size.toString()+","+x.toString()+","+y.toString()+","+words+","+color1.toString()+"\\n")
     } 
     //% group="5.OLED"  
     //% blockId=ddL block="OLED Show x1 %x1 y1 %y1 x2 %x2 y2 %y2 color %color1 Line"
     //% weight=46
-    export function ddL(x1: number, y1: number, x2: number, y2: number, color1: color){
+    export function ddL(x1: number, y1: number, x2: number, y2: number, color1: color):void{
          serial.writeLine("ddL="+x1.toString()+","+y1.toString()+","+x2.toString()+","+y2.toString()+","+color1.toString()+"\\n")
     }
 }
