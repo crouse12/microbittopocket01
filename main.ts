@@ -134,7 +134,7 @@ namespace microbittopocket {
     //% group="2.Pocket_Control" 
     //% blockId=setdigital3 block="Read Pocket digital pin  %pin value"
     //% weight=101
-    export function setdigital3(pin: digitalpin1):string {
+    export function setdigital3(pin: digitalpin1):number {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
@@ -143,7 +143,7 @@ namespace microbittopocket {
     //% group="2.Pocket_Control"
     //% blockId=setdigital4 block="Read Pocket analog pin  %pin value"
     //% weight=101 
-    export function setdigital4(pin: analogpin):string {
+    export function setdigital4(pin: analogpin):number {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
