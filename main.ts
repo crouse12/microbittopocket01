@@ -134,21 +134,21 @@ namespace microbittopocket {
     //% group="2.Pocket_Control" 
     //% blockId=setdigital3 block="Read Pocket digital pin  %pin value"
     //% weight=101
-    export function setdigital3(pin: digitalpin1):number {
+    export function setdigital3(pin: digitalpin1):string {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        return parseFloat(a);
+        return a
     }
     //% group="2.Pocket_Control"
     //% blockId=setdigital4 block="Read Pocket analog pin  %pin value"
     //% weight=101 
-    export function setdigital4(pin: analogpin):number {
+    export function setdigital4(pin: analogpin):string {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
         a=a.substr(0, a.length - 2)
-        return parseFloat(a)
+        return a
     }   
     //% group="3.Thingspeak"      
     //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write Field1 value %value1 "
