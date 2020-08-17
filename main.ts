@@ -138,7 +138,7 @@ namespace microbittopocket {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        return parseInt(a);
+        return parseFloat(a);
     }
     //% group="2.Pocket_Control"
     //% blockId=setdigital4 block="Read Pocket analog pin  %pin value"
@@ -148,7 +148,7 @@ namespace microbittopocket {
         basic.pause(10)
         let a=serial.readString()
         a=a.substr(0, a.length - 2)
-        return parseInt(a)
+        return parseFloat(a)
     }   
     //% group="3.Thingspeak"      
     //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write Field1 value %value1 "
@@ -215,7 +215,7 @@ namespace microbittopocket {
         basic.pause(500)
         let a=serial.readString()
         basic.pause(500)
-        return parseInt(a)
+        return parseFloat(a)
 
     }     
       
