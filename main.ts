@@ -76,11 +76,11 @@ namespace microbittopocket {
      }
         //% group="1.Setup"  
     //% blockId=setMicrobit block="Initialize Microbit |TX %tx|RX %rx|Baud rate %baudrate "
-    //% tx.defl=SerialPin.P0
-    //% rx.defl=SerialPin.P1
+    //% tx.defl=DigitalPin.P0
+    //% rx.defl=DigitalPin.P1
     //% weight=101
     //% blockExternalInputs = 1
-    export function setMicrobit(tx: digitalpin, rx: digitalpin, baudrate: BaudRate):void {
+    export function setMicrobit(tx: DigitalPin, rx: DigitalPin, baudrate: BaudRate):void {
         serial.redirect(
             tx,
             rx,
