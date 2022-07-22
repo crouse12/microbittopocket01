@@ -80,7 +80,7 @@ namespace microbittopocket {
     //% rx.defl=SerialPin.P1
     //% weight=101
     //% blockExternalInputs = 1
-    export function setMicrobit(tx: SerialPin, rx: SerialPin, baudrate: BaudRate):void {
+    export function setMicrobit(tx: digitalpin, rx: digitalpin, baudrate: BaudRate):void {
         serial.redirect(
             tx,
             rx,
